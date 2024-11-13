@@ -75,7 +75,6 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 });
 
 // navBar
-
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');

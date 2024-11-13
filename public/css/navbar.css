@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: var(--bg-color);
+}
 :root {
     --primary-color: #333;
     --bg-color: #e0e0e0;
@@ -13,7 +16,6 @@ body {
     width: 100%;
 }
 header {
-    background-color: #f8f8f8;
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +47,6 @@ header {
     color: var(--primary-color);
 }
 nav {
-    background-color: #f8f8f8;
     padding: 1rem;
 }
 
@@ -95,22 +96,69 @@ footer {
     text-decoration: none;
 }
 
+/* Basic hamburger icon Styling */
+
+/* Menu Icon Styling */
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    margin: 1rem;
+    visibility: hidden;
+    float: right;
+    margin-top: 2rem;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Toggle Animation */
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
 @media (max-width: 768px) {
     #menu-toggle {
         display: block;
     }
-
+    header{
+        float: left;
+    }
+    .logo{
+        font-size: 40px;
+    }
     #sidebar {
         position: fixed;
         top: 0;
         left: -250px;
         width: 250px;
         height: 100%;
-        background-color: #f8f8f8;
+        background-color: var(--primary-color);
+        color: var(--bg-color);
         transition: left 0.3s ease-in-out;
         z-index: 1000;
     }
-
+    .menu-icon{
+        visibility: visible;
+    }
     #sidebar.active {
         left: 0;
     }
