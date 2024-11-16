@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="public/css/fonts.css">
-    <link rel="stylesheet" href="public/css/effects.css">
-    <link rel="stylesheet" href="public/css/navbar.css" />
-    <link rel="stylesheet" href="public/css/about.css">
+    <link rel="stylesheet" href="../public/css/fonts.css" />
+    <link rel="stylesheet" href="../public/css/admin.css">
+    <link rel="stylesheet" href="../public/css/fonts.css" />
+    <link rel="stylesheet" href="../public/css/effects.css" />
 </head>
 <body>
+
+        <main class="content">
+
+        </main>
 
 
     <div id="index-container"></div>
     <script>
-      fetch("/nav-bar.html")
+      fetch("../admin/nav-bar.html")
         .then((Response) => Response.text())
         .then((data) => {
           document.getElementById("index-container").innerHTML = data;
-        });
+        }).catch((error) => console.error(alert(error)));
     </script>
     <script src="/public/js/script.js"></script>
     <script src="/public/js/index.js"></script>

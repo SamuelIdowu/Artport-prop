@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post</title>
-    <link rel="stylesheet" href="public/css/fonts.css">
-    <link rel="stylesheet" href="public/css/post.css" />
-    <link rel="stylesheet" href="public/css/fonts.css" />
-    <link rel="stylesheet" href="public/css/effects.css" />
+    <link rel="stylesheet" href="../public/css/fonts.css">
+    <link rel="stylesheet" href="../public/css/post.css" />
+    <link rel="stylesheet" href="../public/css/fonts.css" />
+    <link rel="stylesheet" href="../public/css/effects.css" />
   </head>
   <body>
     <div class="container">
@@ -63,17 +63,19 @@
           <div id="file-list"></div>
         </div>
 
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn">Post to catalogue</button>
+        <a href="listing-post.html">Post to listing instead</a>
       </form>
     </div>
     <div id="index-container"></div>
     <script>
-      fetch("/nav-bar.html")
+      fetch("../admin/nav-bar.html")
         .then((Response) => Response.text())
         .then((data) => {
           document.getElementById("index-container").innerHTML = data;
-        });
+        }).catch(Error => console.error('Error fetching file', error));
     </script>
-    <script src="/public/js/script.js"></script>
+    <script src="../public/js/script.js"></script>
+    <script src="../public/js/index.js"></script>
   </body>
 </html>

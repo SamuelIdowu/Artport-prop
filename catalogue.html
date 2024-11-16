@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="public/css/fonts.css">
+    <link rel="stylesheet" href="public/css/effects.css">
+    <link rel="stylesheet" href="public/css/navbar.css" />
+    <link rel="stylesheet" href="public/css/about.css">
+</head>
+<body>
+
+
+
+    <div id="index-container"></div>
+    <script>
+      fetch("/nav-bar.html")
+        .then((Response) => Response.text())
+        .then((data) => {
+          document.getElementById("index-container").innerHTML = data;
+        });
+    </script>
+    <script src="/public/js/script.js"></script>
+    <script src="/public/js/index.js"></script>
+</body>
+</html>
