@@ -1,24 +1,44 @@
-// Sample object containing image URLs
-// const images = [
-//     { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
-//     { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
-//     { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
-//     { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
-//     { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
-//     { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" }
-// ];
+// Array of image objects
+const images = [
+  { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
+  { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
+  { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
+  { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
+  { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
+  { src: "public/images/FB_IMG_7.jpg", alt: "Seventh Image" },
+  { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" },
+  { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
+  { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
+  { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
+  { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
+  { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
+  { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" },
+  { src: "public/images/FB_IMG_7.jpg", alt: "Seventh Image" },
+  { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
+  { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
+  { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
+  { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
+  { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
+  { src: "public/images/FB_IMG_7.jpg", alt: "Seventh Image" },
+  { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" },
+  { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
+  { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
+  { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
+  { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
+  { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
+  { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" },
+  { src: "public/images/FB_IMG_7.jpg", alt: "Seventh Image" },
+];
 
-  
-//   // Select the gallery container
-//   const galleryContainer = document.getElementById('imageGallery');
-  
-//   // Iterate through the object and create image elements
-//   for (const key in images) {
-//     if (imageObject.hasOwnProperty(key)) {
-//       const img = document.createElement('img');
-//       img.src = images[key];
-//       img.alt = `Gallery image ${key}`;
-//       galleryContainer.appendChild(img);
-//     }
-//   }
-  
+// Select the gallery container and the template image
+const galleryContainer = document.getElementById("imageGallery");
+const templateImg = document.getElementById("templateImg");
+
+// Iterate over the images array and create image elements
+images.forEach((image) => {
+  const newImg = templateImg.cloneNode(true); // Clone the template image
+  newImg.src = image.src; // Set the image source
+  newImg.alt = image.alt; // Set the image alt text
+  newImg.style.display = "block"; // Make the image visible
+  galleryContainer.appendChild(newImg); // Append the image to the gallery
+});

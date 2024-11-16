@@ -1,3 +1,18 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #e0e0e0;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+   
+
 main{
     margin-top: 10rem;
 }

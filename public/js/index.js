@@ -5,7 +5,8 @@ const images = [
     { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
     { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
     { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
-    { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" }
+    { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" },
+    { src: "public/images/FB_IMG_7.jpg", alt: "Seventh Image" },
 ];
 
 // Function to update the image with a fade effect
