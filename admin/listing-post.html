@@ -80,11 +80,15 @@
     </div>
     <div id="index-container"></div>
     <script>
-      fetch("../admin/nav-bar.html")
-        .then((Response) => Response.text())
-        .then((data) => {
-          document.getElementById("index-container").innerHTML = data;
-        }).catch((error) => console.error(alert(error)));
+      fetch("../nav-bar.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("index-container").innerHTML = data;
+  })
+  .catch((error) => {
+    console.error(error);  // Logs the error in the console
+    alert(error);  // Shows the error as an alert
+  });
     </script>
     <script src="../public/js/script.js"></script>
     <script src="../public/js/index.js"></script>
