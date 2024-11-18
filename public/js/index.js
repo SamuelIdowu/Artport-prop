@@ -208,3 +208,15 @@ document.addEventListener('DOMContentLoaded', function() {
         fileList.innerHTML = '';
     });
 });
+
+//Catalogue
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const toggleButton = document.querySelector('.toggle-description');
+//     const description = document.querySelector('.art-description');
+
+//     toggleButton.addEventListener('click', () => {
+//         description.classList.toggle('visible');
+//         toggleButton.textContent = description.classList.contains('visible') ? 'Hide Description' : 'Show Description';
+//     });
+// });

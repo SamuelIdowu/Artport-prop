@@ -14,7 +14,9 @@ body{
     position: absolute;
     top: 0;
     width: 100%;
+    background-color: var(--bg-color);
 }
+
 header {
     padding: 1rem;
     justify-content: space-between;
@@ -32,7 +34,6 @@ header {
 }
 .logo{
     position: relative;
-    margin-bottom: 1rem;
     text-align: center;
     font-size: 50px;
     font-family: "Amarante", serif;
@@ -45,9 +46,6 @@ header {
     text-decoration: none;
     font-weight: 600;
     color: var(--primary-color);
-}
-nav {
-    padding: 1rem;
 }
 
 nav ul {
@@ -67,11 +65,9 @@ nav ul li a {
     color: #000;
 }
 
-main {
-    padding: 2rem;
-}
 .footer {
     position: relative;
+    width: 100%;
 }
 footer {
     background-color: #222;
@@ -109,7 +105,7 @@ footer {
     margin: 1rem;
     visibility: hidden;
     float: right;
-    margin-top: 2rem;
+    margin-top: -2rem;
 }
 
 .menu-icon span {
@@ -158,6 +154,7 @@ footer {
     }
     .menu-icon{
         visibility: visible;
+        margin-top: 2rem;
     }
     #sidebar.active {
         left: 0;

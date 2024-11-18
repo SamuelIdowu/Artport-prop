@@ -157,6 +157,7 @@ small {
     .container {
         padding: 10px;
         margin: 20px auto;
+        margin-top: 6rem;
     }
     
     form {
@@ -164,8 +165,5 @@ small {
     }
     textarea{
         width: 100%;
-    }
-    .container{
-        margin-top: 10rem;
     }
 }
