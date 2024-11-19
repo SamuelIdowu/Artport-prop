@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
     <link rel="stylesheet" href="../public/css/fonts.css" />
-    <link rel="stylesheet" href="../public/css/admin.css">
+    <link rel="stylesheet" href="../public/css/admin.css" />
     <link rel="stylesheet" href="../public/css/fonts.css" />
     <link rel="stylesheet" href="../public/css/effects.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="../public/css/listing.css" />
+    <link rel="stylesheet" href="../public/css/gallery.css" />
+    <link rel="stylesheet" href="../public/css/catalogue.css" />
+  </head>
+  <body>
+    <main class="content">
 
-        <main class="content">
 
-        </main>
+      <div class="catalogue">
+        <h2>Catalogue</h2>
+        <div class="art-description">
+          <img
+            src="/public/images/FB_IMG_1.jpg"
+            alt="Artwork"
+            class="art-image"
+          />
+          <div class="art-details">
+            <h1 class="art-title">TITLE : The Starry Night</h1>
+            <p class="art-artist">ARTIST : Vincent van Gogh</p>
+            <p class="art-date">DATE : 1889</p>
+            <p class="art-medium">MEDIUM : Oil on canvas</p>
+            <p class="art-dimensions">
+              DIMENSIONS : 73.7 cm × 92.1 cm (29.0 in × 36.3 in)
+            </p>
+            <p class="art-price">PRICE : $100,000,000</p>
+            <p class="description">
+              DESCRIPTION : The Starry Night is an oil on canvas painting by
+              Dutch Post-Impressionist painter Vincent van Gogh. Painted in June
+              1889, it depicts the view from the east-facing window of his
+              asylum room at Saint-Rémy-de-Provence, just before sunrise, with
+              the addition of an idealized village.
+            </p>
+          </div>
+        </div>
+      </div>
 
+
+      <div class="listings">
+        <h2>Listings</h2>
+        <div class="art-description">
+          <img
+            src="/public/images/FB_IMG_1.jpg"
+            alt="Artwork"
+            class="art-image"
+          />
+          <div class="art-details">
+            <h1 class="art-title">TITLE : The Starry Night</h1>
+            <p class="art-artist">ARTIST : Vincent van Gogh</p>
+            <p class="art-date">DATE : 1889</p>
+            <p class="art-medium">MEDIUM : Oil on canvas</p>
+            <p class="art-dimensions">
+              DIMENSIONS : 73.7 cm × 92.1 cm (29.0 in × 36.3 in)
+            </p>
+            <p class="art-price">PRICE : $100,000,000</p>
+            <p class="description">
+              DESCRIPTION : The Starry Night is an oil on canvas painting by Dutch
+              Post-Impressionist painter Vincent van Gogh. Painted in June 1889,
+              it depicts the view from the east-facing window of his asylum room
+              at Saint-Rémy-de-Provence, just before sunrise, with the addition of
+              an idealized village.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="gallery-container">
+        <h2>Gallery</h2>
+        <div class="gallery" id="imageGallery">
+
+          <img id="templateImg" style="display:none;" />
+  
+        </div>
+      </div>
+
+      <div class="link">
+        <a href="/admin/post.html">POST</a>
+      </div>
+    </main>
 
     <div id="index-container"></div>
     <script>
@@ -22,9 +94,10 @@
         .then((Response) => Response.text())
         .then((data) => {
           document.getElementById("index-container").innerHTML = data;
-        }).catch((error) => console.error(alert(error)));
+        })
+        .catch((error) => console.error(alert(error)));
     </script>
-    <script src="/public/js/script.js"></script>
-    <script src="/public/js/index.js"></script>
-</body>
+    <script src="../public/js/script.js"></script>
+    <script src="../public/js/index.js"></script>
+  </body>
 </html>

@@ -147,7 +147,10 @@ small {
 .submit-btn:hover {
     background: #4b5563;
 }
-
+.listing, 
+.gallery{
+    margin-top: -3rem;
+}
 @media (max-width: 780px) {
     .form-row {
         flex-direction: column;

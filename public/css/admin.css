@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #e0e0e0;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+.link a {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-top: 2rem;
+}
+.gallery-container{
+    margin-top: 2rem;
+}

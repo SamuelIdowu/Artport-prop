@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post</title>
-    <link rel="stylesheet" href="../public/css/fonts.css">
+    <link rel="stylesheet" href="../public/css/fonts.css" />
     <link rel="stylesheet" href="../public/css/post.css" />
     <link rel="stylesheet" href="../public/css/fonts.css" />
     <link rel="stylesheet" href="../public/css/effects.css" />
   </head>
   <body>
     <div class="container">
+      <h2>Catalogue</h2>
       <form id="vaccination-form">
         <div class="form-row">
           <div class="form-group">
@@ -47,12 +48,17 @@
         <div class="form-row">
           <div class="form-group">
             <label for="last-name">Description</label>
-            <textarea name="description" id="description" cols="90" rows="10"></textarea>
+            <textarea
+              name="description"
+              id="description"
+              cols="90"
+              rows="10"
+            ></textarea>
           </div>
         </div>
 
         <div class="form-group upload-section">
-          <label>Upload the Photo of Vaccination Card (front and back)</label>
+          <label>Upload the Photo of Artwork</label>
           <div class="upload-area" id="drop-zone">
             <input
               type="file"
@@ -68,16 +74,109 @@
         </div>
 
         <button type="submit" class="submit-btn">Post to catalogue</button>
-        <a href="listing-post.html">Post to listing instead</a>
       </form>
     </div>
+
+    <div class="container listing">
+      <h2>Listings</h2>
+      <form id="vaccination-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="artist-name">Artist name</label>
+            <input type="text" id="artist-name" name="artistName" required />
+          </div>
+          <div class="form-group">
+            <label for="title">Price</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="MM/DD/YYYY"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="medium">Medium</label>
+            <input type="text" id="medium" name="medium" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="medium">Title</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="form-group">
+            <label for="medium">Dimensions</label>
+            <input type="text" id="dim" name="dim" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="last-name">Description</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="90"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-group upload-section">
+          <label>Upload the Photo of Artwork</label>
+          <div class="upload-area" id="drop-zone">
+            <input
+              type="file"
+              id="file-input"
+              accept="image/*"
+              multiple
+              required
+            />
+            <button type="button" class="browse-btn">Browse Files</button>
+            <p>Drag and drop files here</p>
+          </div>
+          <div id="file-list"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Post to Listings</button>
+      </form>
+    </div>
+
+    <div class="container gallery">
+      <h2>Gallery</h2>
+      <div class="form-group upload-section">
+        <label>Upload the Photo of Artwork</label>
+        <div class="upload-area" id="drop-zone">
+          <input
+            type="file"
+            id="file-input"
+            accept="image/*"
+            multiple
+            required
+          />
+          <button type="button" class="browse-btn">Browse Files</button>
+          <p>Drag and drop files here</p>
+        </div>
+        <div id="file-list"></div>
+      </div>
+    </div>
+
     <div id="index-container"></div>
     <script>
       fetch("../nav-bar.html")
         .then((Response) => Response.text())
         .then((data) => {
           document.getElementById("index-container").innerHTML = data;
-        }).catch(Error => console.error('Error fetching file', error));
+        })
+        .catch((Error) => console.error("Error fetching file", error));
     </script>
     <script src="../public/js/script.js"></script>
     <script src="../public/js/index.js"></script>
