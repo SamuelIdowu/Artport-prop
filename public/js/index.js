@@ -1,5 +1,5 @@
 // Define an array of image objects with paths relative to the HTML file's location
-const images = [
+const carauselimages = [
     { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
     { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
     { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
@@ -18,8 +18,8 @@ function updateImage(index) {
 
     // Wait for the fade-out transition to complete before changing the image
     setTimeout(() => {
-        imgElement.src = images[index].src;
-        imgElement.alt = images[index].alt;
+        imgElement.src = carauselimages[index].src;
+        imgElement.alt = carauselimages[index].alt;
 
         // Remove the fade-out class to start the fade-in transition
         imgElement.classList.remove("fade-out");
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Change image every 5 seconds
 let currentIndex = 0;
 setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 1) % carauselimages.length;
     updateImage(currentIndex);
 }, 5000);
 
