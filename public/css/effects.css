@@ -1,5 +1,6 @@
 body{
   font-family:cursive;
+  overflow-x: hidden;
 }
 
 .typing {

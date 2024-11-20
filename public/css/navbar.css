@@ -167,4 +167,8 @@ footer {
     nav ul li {
         margin: 1rem 0;
     }
+    .footer .socials{
+        width: 100vw;
+        font-size: 14px;
+    }
 }

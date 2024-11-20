@@ -1,82 +1,85 @@
 :root {
-    --primary-color: #333;
-    --bg-color: #e0e0e0;
-  }
+  --primary-color: #333;
+  --bg-color: #e0e0e0;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 .content {
-    margin-top: 10rem;
-    margin: 5rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  margin-top: 10rem;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .art-description {
-    max-width: 50rem;
-    display: flex; 
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px #0000001a;
-    padding: 1rem;
-    margin-top: 4rem;
-    cursor: pointer;
-    align-items: center;
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px #0000001a;
+  padding: 1rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  align-self: center;
+  max-width: 80%;
 }
-.description{
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+.description {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
 .art-image {
-    width: 25%;
-    height: auto;
-    object-fit: cover;
+  width: 25%;
+  height: auto;
+  object-fit: cover;
 }
 
 .art-details {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .art-title {
-    margin: 0;
-    font-size: 24px;
+  margin: 0;
+  font-size: 24px;
 }
 
 .art-artist {
-    font-size: 18px;
-    color: #34495e;
-    margin-top: 5px;
+  font-size: 18px;
+  color: #34495e;
+  margin-top: 5px;
 }
 
-.art-date, .art-medium, .art-dimensions, .art-price {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #7f8c8d;
+.art-date,
+.art-medium,
+.art-dimensions,
+.art-price {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #7f8c8d;
 }
 
 @media (max-width: 780px) {
-    .content{
-        margin-top: 2rem;
-        flex-direction: column;
-    }
-    .art-description {
-        flex-direction: column;
-    }
+  .content {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  .art-description {
+    flex-direction: column;
+  }
 
-    .art-image {
-        max-width: 100%;
-        width: 100%;
-    }
+  .art-image {
+    max-width: 100%;
+    width: 100%;
+  }
 }
