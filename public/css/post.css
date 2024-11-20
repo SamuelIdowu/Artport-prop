@@ -147,6 +147,11 @@ small {
 .submit-btn:hover {
     background: #4b5563;
 }
+.post {
+    margin: 5rem;
+    font-size: 2rem;
+    text-align: center;
+}
 .listing, 
 .gallery{
     margin-top: -3rem;

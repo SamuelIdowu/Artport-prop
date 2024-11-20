@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #e0e0e0;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -54,6 +64,25 @@ body {
     margin: 5px 0;
     font-size: 14px;
     color: #7f8c8d;
+}
+.buy-link button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #333;
+        text-decoration: none;
+        color: #333;
+        margin-top: 24px;
+        font-size: 20px;
+        background-color: var(--bg-color);
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    margin-top: 24px;
 }
 
 @media (max-width: 780px) {
