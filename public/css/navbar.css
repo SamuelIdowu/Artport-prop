@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #e0e0e0;
+    --touch: #d63d3d;
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,10 +12,6 @@ body {
 body{
     background-color: var(--bg-color);
 }
-:root {
-    --primary-color: #333;
-    --bg-color: #e0e0e0;
-  }
 .nav{
     position: absolute;
     top: 0;
@@ -39,8 +41,6 @@ header {
     font-family: "Amarante", serif;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
-
 }
 .logo a{
     text-decoration: none;
@@ -59,7 +59,9 @@ nav ul {
 nav ul li {
     margin: 0 1rem;
 }
-
+nav ul li a.active{
+    color: var(--touch) ;
+}
 nav ul li a {
     text-decoration: none;
     color: #000;
@@ -117,6 +119,22 @@ footer {
     transition: all 0.3s ease;
 }
 
+.sidebar{
+    display: block;
+    background-color: var(--primary-color);
+    width: 250px;
+    top: 0;
+    height: 100vh;
+    line-height: 5rem;
+    text-align: center;
+    position: absolute;
+    margin-left: -250px;
+
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: var(--bg-color);
+ }
 /* Toggle Animation */
 .menu-icon.open span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
@@ -144,7 +162,7 @@ footer {
     #sidebar {
         position: fixed;
         top: 0;
-        left: -250px;
+        /* left: -250px; */
         width: 250px;
         height: 100%;
         /* background-color: var(--primary-color); */
@@ -161,7 +179,7 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
+        display: none;
     }
 
     nav ul li {

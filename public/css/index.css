@@ -24,7 +24,12 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 } */
-
+.nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+}
 .background-carousel {
     position: fixed;
     top: 0;
@@ -68,7 +73,12 @@ header {
     padding: 20px;
     margin: 1rem;
 }
-
+header {
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
 
 .logo{
     position: relative;
@@ -144,11 +154,57 @@ h1 {
     line-height: 1.2;
     margin-bottom: 20px;
 }
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    margin: 1rem;
+    visibility: hidden;
+    float: right;
+    margin-top: -2rem;
+}
+#menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+/* Toggle Animation */
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
 
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: flex-end;
+    }
+    #menu-toggle {
+        display: block;
+    }
+    .menu-icon{
+        visibility: visible;
+        margin-top: 2rem;
     }
     nav {
         display: none;
@@ -158,7 +214,9 @@ h1 {
         margin-left: 0;
         margin-bottom: 10px;
     }
-
+    header{
+        float: left;
+    }
     h1 {
         font-size: 3rem;
     }
